@@ -3,7 +3,7 @@ import { useState } from "react"
 export const CounterApp = () => {
 
 
-const [Counter, setCounter] = useState({
+const [{Counter1,Counter2,Counter3}, setCounter] = useState({
     Counter1 :10,
     Counter2 :20,
     Counter3 :30,
@@ -12,12 +12,11 @@ const [Counter, setCounter] = useState({
 
 
 
-
   return (
     <>
-        <h1>CounterApp {Counter1}</h1>
-        <h1>CounterApp {Counter2}</h1>
-        <h1>CounterApp {Counter3}</h1>
+        <h1>Counter App CounterApp {Counter1}</h1>
+        <h1>Counter App CounterApp {Counter2}</h1>
+        <h1>Counter App CounterApp {Counter3}</h1>
 
 
 
