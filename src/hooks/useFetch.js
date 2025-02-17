@@ -5,10 +5,20 @@ export const useFetch = (url) => {
 
     useEffect(() => {
         getFetch();
-    }, [])
+    }, [url])
+
+    const setLoadingState = () =>{
+        setstate({
+            data: null,
+            isLoading: true,
+            hasError: false,
+            error: null,
+           })
+    }
 
     const getFetch = async() =>{
-       const resp = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+        setLoadingState();
+       const resp = await fetch(url);
       
       await new Promise(resolve => setTimeout(resolve,1500));
 
